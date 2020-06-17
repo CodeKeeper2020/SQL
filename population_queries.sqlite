@@ -1,0 +1,30 @@
+-- This is the first query:
+
+SELECT DISTINCT year from population_years;
+
+-- Add your additional queries below:
+
+SELECT population AS 'Largest population size for Gabon of all time'
+FROM population_years
+WHERE country = 'Gabon'
+ORDER BY population DESC
+LIMIT 1;
+
+SELECT country AS '10 lowest population countries in 2005', population
+FROM population_years
+WHERE year = 2005
+ORDER BY population
+LIMIT 10;
+
+SELECT DISTINCT country AS 'Countries with a population over 100 million in the year 2010'
+FROM population_years
+WHERE population > 100
+  AND year = 2010;
+
+  SELECT COUNT(country) AS 'The number of countries in the dataset that have the word Islands in their name'
+  FROM population_years
+  WHERE country LIKE '%Islands%';
+
+  SELECT MAX(population) - MIN(population) AS 'Population difference in Indonesia between years 2000 and 2010'
+  FROM population_years
+  WHERE country = 'Indonesia';
