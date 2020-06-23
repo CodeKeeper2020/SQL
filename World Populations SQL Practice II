@@ -1,5 +1,3 @@
--- World Populations SQL Practice II
-
 -- How many entries in the countries tables are from Africa?
 
 SELECT COUNT(*)
